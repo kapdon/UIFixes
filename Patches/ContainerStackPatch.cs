@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
+using InteractionsHandlerClass = ItemMovementHandler;
+using StashGridClass = StashGrid;
+
 namespace UIFixes
 {
     internal class ContainerStackPatch : ModulePatch

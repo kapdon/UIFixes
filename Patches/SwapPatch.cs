@@ -1,5 +1,4 @@
-﻿using Aki.Reflection.Patching;
-using Aki.Reflection.Utils;
+﻿using StayInTarkov;
 using EFT.InventoryLogic;
 using EFT.UI;
 using EFT.UI.DragAndDrop;
@@ -8,6 +7,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+
+using InteractionsHandlerClass = ItemMovementHandler;
+using StashGridClass = StashGrid;
+using PatchConstants = StayInTarkov.StayInTarkovHelperConstants;
+using ItemContextClass = ItemContext;
+using ItemContextAbstractClass = AbstractItemContext;
+
 
 namespace UIFixes
 {
@@ -29,7 +35,7 @@ namespace UIFixes
         private static MethodInfo SwapOperationToCanAcceptOperationOperator;
 
         // Source container for the drag - we have to grab this early to check it
-        private static IContainer SourceContainer;
+        private static GIContainer SourceContainer;
         private static FieldInfo GridViewNonInteractableField;
 
         // Whether we're being called from the "check every slot" loop

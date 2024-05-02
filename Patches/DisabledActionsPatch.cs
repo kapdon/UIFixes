@@ -4,6 +4,8 @@ using System;
 using System.Linq;
 using System.Reflection;
 
+using ActionsReturnClass = InteractionStates;
+
 namespace UIFixes
 {
     public class DisabledActionsPatch : ModulePatch

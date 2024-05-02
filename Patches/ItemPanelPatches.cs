@@ -1,5 +1,4 @@
-﻿using Aki.Reflection.Patching;
-using Aki.Reflection.Utils;
+﻿using StayInTarkov;
 using EFT.InventoryLogic;
 using EFT.UI;
 using HarmonyLib;
@@ -11,6 +10,9 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
+
+using PatchConstants = StayInTarkov.StayInTarkovHelperConstants;
+using CacheResourcesPopAbstractClass = GClass2468;
 
 namespace UIFixes
 {
@@ -186,7 +188,7 @@ namespace UIFixes
             }
 
             [PatchPostfix]
-            private static void Postfix(ItemSpecificationPanel __instance, ItemInfoInteractionsAbstractClass<EItemInfoButton> contextInteractions, Item ___item_0, InteractionButtonsContainer ____interactionButtonsContainer)
+            private static void Postfix(ItemSpecificationPanel __instance, GClass3031<EItemInfoButton> contextInteractions, Item ___item_0, InteractionButtonsContainer ____interactionButtonsContainer)
             {
                 if (!(___item_0 is Mod))
                 {

@@ -3,6 +3,8 @@ using EFT.UI.Chat;
 using System;
 using System.Reflection;
 
+using DialogueClass = Dialogue;
+
 namespace UIFixes
 {
     public class MailReceiveAllPatch : ModulePatch
